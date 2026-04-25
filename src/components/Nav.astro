@@ -1,0 +1,14 @@
+---
+const path = Astro.url.pathname;
+const isHome = path === '/' || path === '';
+const isSalon = path.startsWith('/salon');
+const isNotatnik = path.startsWith('/notatnik');
+---
+<header class="site-nav">
+  <div class="mark"><i></i> mwillard.pl</div>
+  <nav>
+    <a href="/" class:list={[{ active: isHome }]}>Plakat</a>
+    <a href="/salon/" class:list={[{ active: isSalon }]}>Salon</a>
+    <a href="/notatnik/" class:list={[{ active: isNotatnik }]}>Notatnik</a>
+  </nav>
+</header>

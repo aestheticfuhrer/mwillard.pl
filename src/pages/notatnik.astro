@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
+
+const entry = await getEntry('notatnik', 'index');
+const { publications = [], paintings = [], cats = [] } = entry?.data ?? {};
+---
+<BaseLayout title="Notatnik · Maja Willard" bodyClass="notatnik-bg">
+<main class="notatnik">
+  <div class="notatnik-marg" aria-hidden="true"></div>
+
+  <header class="notatnik-head">
+    <div>
+      <div class="eyebrow"><span style="color:var(--crimson)">●</span> notatnik · the cv side of things</div>
+      <h1 class="display">Maja Willard</h1>
+      <div class="sub">
+        Researcher · Faculty of Psychology, University of Warsaw.<br/>
+        Member of the <a href="https://s-on.pl">Society for Open Science</a>.<br/>
+        ORCID <span class="mono">0009-0005-3482-1119</span> · <a href="mailto:mayaowillard@gmail.com">mayaowillard@gmail.com</a>
+      </div>
+    </div>
+    <div class="notatnik-portrait">
+      <img src="/images/portrait_glasses.jpg" alt="Maja Willard"/>
+      <div class="cap">maja, 2025</div>
+    </div>
+  </header>
+
+  <section class="note-section">
+    <div class="note-num display">§1</div>
+    <h2>Pozycja <span class="en">position</span></h2>
+    <dl class="cv-grid">
+      <dt>2024 →</dt><dd>
+        <div class="role">PhD candidate · cognitive neuroscience</div>
+        <span class="meta">Faculty of Psychology, University of Warsaw. Working on <em>neural theories of consciousness</em>, psychedelic neurophenomenology, and methodology of psychedelic-assisted therapy research.</span>
+      </dd>
+      <dt>2025 →</dt><dd>
+        <div class="role">Co-founder · CATS Conference</div>
+        <span class="meta"><em>Conferences Acclaiming Transparent Science</em> — pushing for rigorous psychedelic science in Poland. <a href="https://cats-conference.pl">cats-conference.pl</a></span>
+      </dd>
+      <dt>2022 – 24</dt><dd>
+        <div class="role">Research assistant · psychedelics lab</div>
+        <span class="meta">Functional connectivity in chronic schizophrenia · neurobiomarkers of psychosis · long-term naturalistic psychedelic users.</span>
+      </dd>
+    </dl>
+  </section>
+
+  <section class="note-section">
+    <div class="note-num display">§2</div>
+    <h2>Publikacje <span class="en">publications</span></h2>
+    <ol class="pub-list">
+      {publications.map((p) => <li set:html={p.citation} />)}
+    </ol>
+  </section>
+
+  <section class="note-section">
+    <div class="note-num display">§3</div>
+    <h2>Atelier <span class="en">paintings</span></h2>
+    <div class="note-art">
+      {paintings.map((p) => (
+        <figure>
+          <img src={`/images/${p.file}`} alt={p.caption} />
+          <figcaption>{p.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section class="note-section" style="border-bottom:none">
+    <div class="note-num display">§4</div>
+    <h2>Koty <span class="en">cats</span></h2>
+    <div class="note-cats">
+      {cats.map((c) => <img src={`/images/${c.file}`} alt={c.alt ?? ''} />)}
+    </div>
+  </section>
+</main>
+</BaseLayout>

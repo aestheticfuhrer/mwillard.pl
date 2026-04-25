@@ -1,0 +1,20 @@
+<div class="escher-loader" id="escherLoader">
+  <svg class="escher-svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+    <path d="M 200 200 m -180 0 a 180 180 0 1 1 360 0 a 180 180 0 1 1 -360 0" />
+    <path d="M 200 200 m -140 0 a 140 140 0 1 1 280 0 a 140 140 0 1 1 -280 0" />
+    <path d="M 200 200 m -100 0 a 100 100 0 1 1 200 0 a 100 100 0 1 1 -200 0" />
+    <path d="M 200 200 m -60 0 a 60 60 0 1 1 120 0 a 60 60 0 1 1 -120 0" />
+    <path d="M 20 200 L 380 200 M 200 20 L 200 380 M 73 73 L 327 327 M 327 73 L 73 327" />
+    <path d="M 200 200 m 0 -180 q 90 30 130 90 q 30 60 -10 130 q -40 70 -120 60 q -80 -10 -110 -90 q -30 -80 30 -130 q 60 -50 80 -60" />
+  </svg>
+  <div class="label">remember it's all in your head <em>— a séance with maja</em></div>
+</div>
+<script is:inline>
+  setTimeout(function () {
+    var el = document.getElementById('escherLoader');
+    if (el) el.classList.add('gone');
+  }, 3400);
+  document.getElementById('escherLoader').addEventListener('click', function () {
+    this.classList.add('gone');
+  });
+</script>

@@ -1,0 +1,23 @@
+{
+  "publications": [
+    { "citation": "Wójcik, M., Orłowski, P., Adamczyk, S., et al. (submitted Jan 2026). <em>No evidence for persistent neurophysiological reorganization in long-term naturalistic psychedelic users.</em>" },
+    { "citation": "Domingos, C., Więcławski, W., Frycz, S., <strong>Wójcik, M.</strong>, Jáni, M., Dudzińska, O., Ros, T. (2025). <em>Functional connectivity in chronic schizophrenia.</em> Brain &amp; Behavior." },
+    { "citation": "Adamczyk, P., Więcławski, W., <strong>Wójcik, M.</strong>, Frycz, S., Panek, B., et al. (2025). <em>Aberrant information flow within the resting-state triple-network model in schizophrenia.</em> Psychiatry Research: Neuroimaging." },
+    { "citation": "Wójcik, M., Lenartowicz, P., Kapka, Z., Pierz, J., Skupień, J. (2025). <em>Methodological challenges in psychedelic-assisted therapy research for SUDs.</em> Preregistered review." },
+    { "citation": "Górski, M.R., Kubik, K., Jeleń, A., Kalinowski, M., Stefanowicz, M., Nowak, G., <strong>Wójcik, M.</strong>, et al. (under review). <em>WEIRD in, WEIRD out: cultural bias in psychological meta-analyses.</em> Psychological Bulletin." }
+  ],
+  "paintings": [
+    { "file": "painting_purplecat_street.jpg", "caption": "nocny zaułek" },
+    { "file": "painting_klimt_woman.jpg", "caption": "w stylu Klimta" },
+    { "file": "painting_dragons.jpg", "caption": "red dragons" },
+    { "file": "drawing_charcoal_venus.jpg", "caption": "charcoal Venus" }
+  ],
+  "cats": [
+    { "file": "cat_eged_01.jpg" },
+    { "file": "cat_eged_02.jpg" },
+    { "file": "cat_eged_03.jpg" },
+    { "file": "cat_eged_04.jpg" },
+    { "file": "cat_eged_05.jpg" },
+    { "file": "cat_eged_06.jpg" }
+  ]
+}

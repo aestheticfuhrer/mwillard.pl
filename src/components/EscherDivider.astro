@@ -1,0 +1,24 @@
+---
+type Variant = 'x' | 'circles';
+interface Props { variant?: Variant }
+const { variant = 'x' } = Astro.props;
+---
+<div class="escher-div">
+  {variant === 'circles' ? (
+    <svg viewBox="0 0 280 70">
+      <path d="M 0 35 L 280 35" stroke-width="1" fill="none"/>
+      <path class="r" d="M 30 35 m -18 0 a 18 18 0 1 1 36 0 a 18 18 0 1 1 -36 0" stroke-width="1.2" fill="none"/>
+      <path class="b" d="M 80 35 m -18 0 a 18 18 0 1 1 36 0 a 18 18 0 1 1 -36 0" stroke-width="1.2" fill="none"/>
+      <path d="M 130 35 m -18 0 a 18 18 0 1 1 36 0 a 18 18 0 1 1 -36 0" stroke-width="1.2" fill="none"/>
+      <path class="r" d="M 180 35 m -18 0 a 18 18 0 1 1 36 0 a 18 18 0 1 1 -36 0" stroke-width="1.2" fill="none"/>
+      <path class="b" d="M 230 35 m -18 0 a 18 18 0 1 1 36 0 a 18 18 0 1 1 -36 0" stroke-width="1.2" fill="none"/>
+    </svg>
+  ) : (
+    <svg viewBox="0 0 280 70">
+      <path d="M 0 35 L 280 35" stroke-width="1"/>
+      <path class="r" d="M 20 10 L 50 60 L 80 10 L 110 60 L 140 10 L 170 60 L 200 10 L 230 60 L 260 10" stroke-width="1.2" fill="none"/>
+      <path class="b" d="M 20 60 L 50 10 L 80 60 L 110 10 L 140 60 L 170 10 L 200 60 L 230 10 L 260 60" stroke-width="1.2" fill="none"/>
+      <path d="M 140 35 m -8 0 a 8 8 0 1 1 16 0 a 8 8 0 1 1 -16 0" stroke-width="1" fill="none"/>
+    </svg>
+  )}
+</div>
