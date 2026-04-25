@@ -1,0 +1,21 @@
+paths:
+  static: public
+  uploads: public/uploads
+timezone: Europe/Warsaw
+markdown:
+  engine: commonmark
+  options:
+    gfm: true
+collections_config:
+  pages:
+    path: src/pages
+    icon: wysiwyg
+  content:
+    path: src/content
+    icon: wysiwyg
+  notatnik:
+    path: src/content/notatnik
+    icon: cottage
+  src:
+    path: src
+    icon: abc
