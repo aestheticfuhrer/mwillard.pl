@@ -22,3 +22,17 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# studio/ lives next door and must NEVER be tracked here.
+# These guard against accidental symlinks or copies leaking private content.
+studio/
+**/studio/
+inbox/
+**/inbox/
+archive/
+**/archive/
+design-system/
+**/design-system/
+DEPLOY.md
+.agents/
+skills-lock.json
