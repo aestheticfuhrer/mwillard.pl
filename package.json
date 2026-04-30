@@ -1,5 +1,5 @@
 {
-  "name": "site-astro",
+  "name": "mwillard-pl",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -12,6 +12,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.1.9"
+    "astro": "^6.2.1"
   }
 }
